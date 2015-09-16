@@ -26,6 +26,7 @@
                 var firstName = $("#firstName").val();
                 var lastName = $("#lastName").val();
                 var email = $("#email").val();
+                var newemail = $("#newemail").val();
                 var phone = $("#phone").val();
 
                 if (firstName.length == 0 || lastName.length == 0 || email.length == 0 || phone.length == 0) {
@@ -40,6 +41,7 @@
                             firstName: firstName,
                             lastName: lastName,
                             email: email,
+                            newemail: newemail,
                             phone: phone
                         }),
                         contentType: "application/json; charset=utf-8",
@@ -48,6 +50,7 @@
                             $("#firstName").val("");
                             $("#lastName").val("");
                             $("#email").val("");
+                            $("#newemail").val("");
                             $("#phone").val("");
                             $("#messageMessage").text("Record updated!");
                             $("#message").show();
@@ -92,8 +95,8 @@
                         <input type="email" class="form-control" id="email" placeholder="For verification" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">New Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="New Email" required>
+                        <label for="newemail">New Email</label>
+                        <input type="email" class="form-control" id="newemail" placeholder="New Email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
